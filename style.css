@@ -1,0 +1,56 @@
+body{
+    background-color: rgba(205, 134, 63, 0.429);
+    justify-items: center;
+    align-content: center;
+    font-family:Arial, sans-serif;
+  }
+  h1{
+    margin-top: 50px;
+
+  }
+  h1, h2{
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid black; /* Cursor */
+  }
+  h1{
+    font-weight: bold;
+    width: 13ch; /*text length */
+    animation: type 3s steps(13) forwards, blink 0.7s infinite;
+  }
+  h2{
+    font-weight: 600;
+    width: 23.5ch; /*text length */
+    visibility: hidden; /* Hide it initially */
+    animation: typing 3s steps(23) forwards 3s, blink 0.7s infinite 3s;
+  }
+  .btn{
+    border: 1px;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
+    background-color: #6f501dac;
+    position: relative;
+    top: 25px;
+
+  }
+  .paragraph{
+    text-align: justify;
+    max-width: 500px;
+    margin-top: 60px;
+    display: none;
+  }
+  
+  @keyframes type {
+    from { width: 0; }
+    to { width: 13ch; } /* Total characters in the text */
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 23.5ch; } /* Total characters in the text */
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
